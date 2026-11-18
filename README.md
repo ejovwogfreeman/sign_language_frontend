@@ -1,16 +1,53 @@
-# React + Vite
+# SignBridge Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A secure, responsive React frontend for **SignBridge**, enabling real-time sign language translation via Gemini Vision WebSockets, secure JWT authentication, session management, and translation history tracking.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- **Real-Time Studio Stream:** Secure WebSocket connection streaming webcam frames to the backend for real-time sign language translation and confidence scoring.
+- **JWT Authentication:** Complete sign-in, registration, and password recovery flow with strict error handling.
+- **Translation History Dashboard:** View, filter, and delete saved translation records.
+- **Responsive Dark/Light Mode:** Seamless theme toggling persisted via `localStorage` and custom styling hooks.
+- **Interactive Modals:** Secure confirmation prompts for saving and deleting translation history items.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** (Hooks, Component Architecture)
+- **Lucide React** (Modern UI Icons)
+- **Native Web APIs** (`navigator.mediaDevices.getUserMedia`, `WebSocket`, `HTMLCanvasElement`)
+- **CSS-in-JS / Responsive Theme System**
+
+---
+
+## 📦 Project Setup & Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/ejovwogfreeman/sign_language_frontend.git
+   cd sign_language_frontend
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure API Endpoint:**
+   Ensure `API_URL` in your configuration points to your running FastAPI backend (default: `http://127.0.0.1:8000`).
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Build for production:**
+   ```bash
+   npm run build
+   ```
